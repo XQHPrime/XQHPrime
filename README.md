@@ -47,6 +47,10 @@
   <a href="https://codeforces.com/profile/SilverChariotO.o">
     <img src="https://codeforces-readme-stats.vercel.app/api/card?username=SilverChariotO.o&theme=dark&show_icons=true" alt="Codeforces Stats" width="600" />
   </a>
+  <br />
+  <a href="https://ac.nowcoder.com/acm/contest/profile/736728226">
+    <img src="./assets/nowcoder-card.svg" alt="NowCoder Stats" width="600" />
+  </a>
 </div>
 
 ## Tech Stack
