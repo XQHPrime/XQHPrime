@@ -7,12 +7,12 @@
       <stop offset="1" stop-color="#111827" />
     </linearGradient>
     <linearGradient id="accent" x1="30" y1="26" x2="570" y2="26" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#a78bfa" />
-      <stop offset="1" stop-color="#7c3aed" />
+      <stop stop-color="#60a5fa" />
+      <stop offset="1" stop-color="#2563eb" />
     </linearGradient>
     <linearGradient id="accentFill" x1="44" y1="44" x2="184" y2="76" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#a78bfa" />
-      <stop offset="1" stop-color="#7c3aed" />
+      <stop stop-color="#60a5fa" />
+      <stop offset="1" stop-color="#2563eb" />
     </linearGradient>
   </defs>
 
@@ -27,7 +27,7 @@
   <g transform="translate(44,136)">
     <rect width="246" height="34" rx="17" fill="#0b1220" stroke="#1f2937" />
     <text x="20" y="21" fill="#8b9bb4" font-size="11" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">Max Rating</text>
-    <text x="226" y="23" text-anchor="end" fill="#ddd6fe" font-size="20" font-weight="700" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">1867</text>
+    <text x="226" y="23" text-anchor="end" fill="#bfdbfe" font-size="20" font-weight="700" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">1867</text>
   </g>
   <g transform="translate(310,136)">
     <rect width="246" height="34" rx="17" fill="#0b1220" stroke="#1f2937" />
@@ -35,22 +35,23 @@
     <text x="226" y="23" text-anchor="end" fill="#f8fafc" font-size="20" font-weight="700" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">1799</text>
   </g>
 
-  <g transform="translate(44,188)">
-    <rect width="152" height="60" rx="16" fill="#111827" stroke="#263041" />
-    <rect x="16" y="18" width="5" height="24" rx="2.5" fill="#f59e0b" />
-    <text x="30" y="25" fill="#8b9bb4" font-size="11" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">Contests</text>
-    <text x="30" y="45" fill="#f8fafc" font-size="22" font-weight="700" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">48</text>
-  </g>
-  <g transform="translate(224,188)">
-    <rect width="152" height="60" rx="16" fill="#111827" stroke="#263041" />
-    <rect x="16" y="18" width="5" height="24" rx="2.5" fill="#22c55e" />
-    <text x="30" y="25" fill="#8b9bb4" font-size="11" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">Problems Solved</text>
-    <text x="30" y="45" fill="#f8fafc" font-size="22" font-weight="700" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">132</text>
-  </g>
-  <g transform="translate(404,188)">
-    <rect width="152" height="60" rx="16" fill="#111827" stroke="#263041" />
-    <rect x="16" y="18" width="5" height="24" rx="2.5" fill="#fb7185" />
-    <text x="30" y="25" fill="#8b9bb4" font-size="11" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">Followers</text>
-    <text x="30" y="45" fill="#f8fafc" font-size="22" font-weight="700" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">20</text>
-  </g>
+  
+    <g transform="translate(44,188)">
+      <rect width="152" height="60" rx="16" fill="#111827" stroke="#263041" />
+      <rect x="16" y="18" width="5" height="24" rx="2.5" fill="#f59e0b" />
+      <text x="30" y="25" fill="#8b9bb4" font-size="11" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">Contests</text>
+      <text x="30" y="45" fill="#f8fafc" font-size="22" font-weight="700" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">48</text>
+    </g>
+    <g transform="translate(224,188)">
+      <rect width="152" height="60" rx="16" fill="#111827" stroke="#263041" />
+      <rect x="16" y="18" width="5" height="24" rx="2.5" fill="#22c55e" />
+      <text x="30" y="25" fill="#8b9bb4" font-size="11" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">Problems Solved</text>
+      <text x="30" y="45" fill="#f8fafc" font-size="22" font-weight="700" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">132</text>
+    </g>
+    <g transform="translate(404,188)">
+      <rect width="152" height="60" rx="16" fill="#111827" stroke="#263041" />
+      <rect x="16" y="18" width="5" height="24" rx="2.5" fill="#fb7185" />
+      <text x="30" y="25" fill="#8b9bb4" font-size="11" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">Followers</text>
+      <text x="30" y="45" fill="#f8fafc" font-size="22" font-weight="700" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">20</text>
+    </g>
 </svg>
