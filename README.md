@@ -14,6 +14,7 @@
   <div>
   <a href="https://github.com/XQHPrime"><img src="https://img.shields.io/badge/GitHub-XQHPrime-181717?logo=github&logoColor=white" alt="GitHub" /></a>&nbsp;
   <a href="https://codeforces.com/profile/SilverChariotO.o"><img src="https://img.shields.io/badge/Codeforces-SilverChariotO.o-1F8ACB?logo=codeforces&logoColor=white" alt="Codeforces" /></a>&nbsp;
+  <a href="https://ac.nowcoder.com/acm/contest/profile/736728226"><img src="https://img.shields.io/badge/NowCoder-%E9%BB%84%E8%89%B2%E7%8C%AB%E7%8C%AB%E5%A4%B4-2DB55D?logo=nowcoder&logoColor=white" alt="NowCoder" /></a>&nbsp;
   <img src="https://komarev.com/ghpvc/?username=XQHPrime&label=Views&color=0e75b6&style=flat" alt="访问量统计" />
 </div>
 </p>
@@ -49,7 +50,7 @@
   </a>
   <br />
   <a href="https://ac.nowcoder.com/acm/contest/profile/736728226">
-    <img src="./assets/nowcoder-card.svg" alt="NowCoder Stats" width="600" />
+    <img src="./assets/nowcoder-card.svg?v=2" alt="NowCoder Stats" width="600" />
   </a>
 </div>
 

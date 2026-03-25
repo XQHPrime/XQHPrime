@@ -94,19 +94,22 @@ def render_card(data: dict[str, str]) -> str:
       <stop stop-color="{accent_start}" />
       <stop offset="1" stop-color="{accent_end}" />
     </linearGradient>
-    <linearGradient id="accentFill" x1="44" y1="44" x2="184" y2="76" gradientUnits="userSpaceOnUse">
-      <stop stop-color="{accent_start}" />
-      <stop offset="1" stop-color="{accent_end}" />
+    <linearGradient id="brandFill" x1="44" y1="40" x2="80" y2="76" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#34d399" />
+      <stop offset="1" stop-color="#10b981" />
     </linearGradient>
   </defs>
 
   <rect x="10" y="10" width="580" height="250" rx="22" fill="url(#bg)" />
   <rect x="10.5" y="10.5" width="579" height="249" rx="21.5" stroke="#30363d" />
   <rect x="24" y="24" width="552" height="5" rx="2.5" fill="url(#accent)" />
-  <rect x="44" y="40" width="140" height="32" rx="16" fill="url(#accentFill)" />
-  <text x="114" y="60" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="700" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">NOWCODER</text>
-  <text x="44" y="96" fill="#f8fafc" font-size="28" font-weight="700" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">{username}</text>
-  <text x="44" y="118" fill="#8b9bb4" font-size="12" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">Competitive Programming Stats</text>
+  <rect x="44" y="40" width="36" height="36" rx="12" fill="#0f1f17" stroke="#1d3d2f" />
+  <rect x="52" y="48" width="20" height="20" rx="8" fill="url(#brandFill)" />
+  <text x="62" y="62" text-anchor="middle" fill="#052e1b" font-size="11" font-weight="800" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">N</text>
+  <text x="94" y="58" fill="#f8fafc" font-size="18" font-weight="700" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">NowCoder</text>
+  <text x="94" y="74" fill="#8b9bb4" font-size="11" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">Contest Stats</text>
+  <text x="44" y="106" fill="#f8fafc" font-size="28" font-weight="700" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">{username}</text>
+  <text x="44" y="128" fill="#8b9bb4" font-size="12" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">Competitive Programming Stats</text>
 
   <g transform="translate(44,136)">
     <rect width="246" height="34" rx="17" fill="#0b1220" stroke="#1f2937" />
