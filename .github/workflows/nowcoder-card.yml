@@ -1,9 +1,17 @@
 name: update nowcoder card
 
 on:
+  push:
+    paths:
+      - "scripts/generate_nowcoder_card.py"
+      - ".github/workflows/nowcoder-card.yml"
   schedule:
     - cron: "0 4 * * *"
   workflow_dispatch:
+
+concurrency:
+  group: nowcoder-card-${{ github.ref }}
+  cancel-in-progress: true
 
 permissions:
   contents: write
@@ -15,6 +23,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.ref_name }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -31,4 +42,5 @@ jobs:
           git add assets/nowcoder-card.svg
           git diff --cached --quiet && exit 0
           git commit -m "chore: update nowcoder card"
-          git push
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin HEAD:"${GITHUB_REF_NAME}"

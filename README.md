@@ -50,7 +50,7 @@
   </a>
   <br />
   <a href="https://ac.nowcoder.com/acm/contest/profile/736728226">
-    <img src="./assets/nowcoder-card.svg?v=2" alt="NowCoder Stats" width="600" />
+    <img src="./assets/nowcoder-card.svg?v=3" alt="NowCoder Stats" width="600" />
   </a>
 </div>
 
