@@ -37,7 +37,7 @@
 
 - 2025/10 - **🥈 Silver Medal** - The 2025 ICPC Asia Xi'an Regional Contest
 - 2025/09 - **🏆 Champion** - The 2025 CCPC Nanchang National Invitational Contest
-- 2025/05 - **🥇 Gold Medal** - The 2025 ICPC China Shaanxi National Invitational Programming Contest
+- 2025/05 - **🥇 Gold Medal** - The 2025 ICPC China Shaanxi National Invitational Contest
 - 2024/11 - **🥉 Bronze Medal** - The 2024 ICPC Asia Hangzhou Regional Contest
 - 2024/10 - **🥉 Bronze Medal** - The 2024 ICPC Asia Chengdu Regional Contest
 - 2024/05 - **🥉 Bronze Medal** - The 2024 CCPC Fuzhou National Invitational Contest
