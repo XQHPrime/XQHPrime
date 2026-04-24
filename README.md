@@ -10,14 +10,12 @@
 
 <p>Code for products, think with algorithms, build with AI.</p>
 
-<p>
-  <div>
+<div align="center">
   <a href="https://github.com/XQHPrime"><img src="https://img.shields.io/badge/GitHub-XQHPrime-181717?logo=github&logoColor=white" alt="GitHub" /></a>&nbsp;
   <a href="https://codeforces.com/profile/SilverChariotO.o"><img src="https://img.shields.io/badge/Codeforces-SilverChariotO.o-1F8ACB?logo=codeforces&logoColor=white" alt="Codeforces" /></a>&nbsp;
   <a href="https://ac.nowcoder.com/acm/contest/profile/736728226"><img src="https://img.shields.io/badge/NowCoder-%E9%BB%84%E8%89%B2%E7%8C%AB%E7%8C%AB%E5%A4%B4-2DB55D?logo=nowcoder&logoColor=white" alt="NowCoder" /></a>&nbsp;
-  <img src="https://komarev.com/ghpvc/?username=XQHPrime&label=Views&color=0e75b6&style=flat" alt="访问量统计" />
+  <img src="https://komarev.com/ghpvc/?username=XQHPrime&label=Views&color=0e75b6&style=flat" alt="Views" />
 </div>
-</p>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/XQHPrime/XQHPrime/output/github-contribution-grid-snake-dark.svg" />
@@ -44,13 +42,14 @@
 
 ## Coding Profiles
 
+<!-- Edit card templates in assets/coding-profiles and let the workflow publish output/codeforces-card.svg + output/nowcoder-card.svg -->
 <div align="center">
   <a href="https://codeforces.com/profile/SilverChariotO.o">
-    <img src="https://codeforces-readme-stats.vercel.app/api/card?username=SilverChariotO.o&theme=dark&show_icons=true" alt="Codeforces Stats" width="600" />
+    <img src="https://raw.githubusercontent.com/XQHPrime/XQHPrime/output/codeforces-card.svg" alt="Codeforces Stats" width="600" />
   </a>
   <br />
   <a href="https://ac.nowcoder.com/acm/contest/profile/736728226">
-    <img src="./assets/nowcoder-card.svg?v=3" alt="NowCoder Stats" width="600" />
+    <img src="https://raw.githubusercontent.com/XQHPrime/XQHPrime/output/nowcoder-card.svg" alt="NowCoder Stats" width="600" />
   </a>
 </div>
 

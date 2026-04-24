@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coding Profiles Preview</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #0b1120;
+        --panel: #111827;
+        --text: #f8fafc;
+        --muted: #94a3b8;
+        --border: #1f2937;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 32px;
+        font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+        background:
+          radial-gradient(circle at top, rgba(59, 130, 246, 0.12), transparent 38%),
+          linear-gradient(180deg, #0f172a 0%, var(--bg) 100%);
+        color: var(--text);
+      }
+
+      main {
+        max-width: 1280px;
+        margin: 0 auto;
+      }
+
+      .hero {
+        margin-bottom: 24px;
+        padding: 20px 24px;
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        background: rgba(17, 24, 39, 0.82);
+        backdrop-filter: blur(10px);
+      }
+
+      h1 {
+        margin: 0 0 8px;
+        font-size: 28px;
+      }
+
+      p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      .grid {
+        display: grid;
+        gap: 20px;
+      }
+
+      .card {
+        padding: 20px;
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        background: rgba(15, 23, 42, 0.78);
+      }
+
+      .card h2 {
+        margin: 0 0 14px;
+        font-size: 18px;
+      }
+
+      img {
+        display: block;
+        width: min(100%, 600px);
+        border-radius: 18px;
+      }
+
+      code {
+        padding: 2px 6px;
+        border-radius: 999px;
+        background: rgba(30, 41, 59, 0.9);
+        color: #bfdbfe;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <h1>Coding Profiles Preview</h1>
+        <p>Run <code>node scripts/generate_coding_profile_cards.mjs --mode sample</code> to refresh the local preview cards.</p>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <h2>Codeforces</h2>
+          <img src="./generated/codeforces-card.svg" alt="Local Codeforces card preview" />
+        </article>
+
+        <article class="card">
+          <h2>NowCoder</h2>
+          <img src="./generated/nowcoder-card.svg" alt="Local NowCoder card preview" />
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

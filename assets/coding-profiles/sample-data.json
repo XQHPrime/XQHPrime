@@ -1,0 +1,36 @@
+{
+  "cards": {
+    "codeforces": {
+      "metaTitle": "Codeforces Stats Card",
+      "desc": "Sample Codeforces card data for local preview.",
+      "username": "SilverChariotO.o",
+      "profileLine": "Candidate Master / max Candidate Master",
+      "summaryLeftLabel": "Max Rating",
+      "summaryLeftValue": "1903",
+      "summaryRightLabel": "Current Rating",
+      "summaryRightValue": "1872",
+      "stat1Label": "Contests",
+      "stat1Value": "46",
+      "stat2Label": "Solved",
+      "stat2Value": "518",
+      "stat3Label": "Friends",
+      "stat3Value": "37"
+    },
+    "nowcoder": {
+      "metaTitle": "NowCoder Stats Card",
+      "desc": "Sample NowCoder card data for local preview.",
+      "username": "Yellow Cat",
+      "profileLine": "Competitive Programming Stats",
+      "summaryLeftLabel": "Max Rating",
+      "summaryLeftValue": "1867",
+      "summaryRightLabel": "Current Rating",
+      "summaryRightValue": "1799",
+      "stat1Label": "Contests",
+      "stat1Value": "48",
+      "stat2Label": "Solved",
+      "stat2Value": "132",
+      "stat3Label": "Followers",
+      "stat3Value": "20"
+    }
+  }
+}

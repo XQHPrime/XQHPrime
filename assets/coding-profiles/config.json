@@ -1,0 +1,16 @@
+{
+  "cards": {
+    "codeforces": {
+      "template": "codeforces-card.template.svg",
+      "output": "codeforces-card.svg",
+      "profileUrl": "https://codeforces.com/profile/SilverChariotO.o",
+      "handle": "SilverChariotO.o"
+    },
+    "nowcoder": {
+      "template": "nowcoder-card.template.svg",
+      "output": "nowcoder-card.svg",
+      "profileUrl": "https://ac.nowcoder.com/acm/contest/profile/736728226",
+      "profileId": "736728226"
+    }
+  }
+}
