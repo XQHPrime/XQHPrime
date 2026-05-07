@@ -45,11 +45,11 @@
 <!-- Edit card templates in assets/coding-profiles and let the workflow publish profiles-output/codeforces-card.svg + profiles-output/nowcoder-card.svg -->
 <div align="center">
   <a href="https://codeforces.com/profile/SilverChariotO.o">
-    <img src="https://raw.githubusercontent.com/XQHPrime/XQHPrime/profiles-output/codeforces-card.svg" alt="Codeforces Stats" width="600" />
+    <img src="https://raw.githubusercontent.com/XQHPrime/XQHPrime/profiles-output/codeforces-card.svg?v=f84e825" alt="Codeforces Stats" width="600" />
   </a>
   <br />
   <a href="https://ac.nowcoder.com/acm/contest/profile/736728226">
-    <img src="https://raw.githubusercontent.com/XQHPrime/XQHPrime/profiles-output/nowcoder-card.svg" alt="NowCoder Stats" width="600" />
+    <img src="https://raw.githubusercontent.com/XQHPrime/XQHPrime/profiles-output/nowcoder-card.svg?v=f84e825" alt="NowCoder Stats" width="600" />
   </a>
 </div>
 
