@@ -1,0 +1,62 @@
+<svg width="600" height="270" viewBox="0 0 600 270" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <!-- Edit this template in VS Code. Data is injected by scripts/generate_coding_profile_cards.mjs. -->
+  <title id="title">NowCoder Stats Card</title>
+  <desc id="desc">NowCoder contest profile card for 黄色猫猫头</desc>
+  <defs>
+    <linearGradient id="bg" x1="18" y1="12" x2="582" y2="258" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0d1117" />
+      <stop offset="1" stop-color="#111827" />
+    </linearGradient>
+    <linearGradient id="accent" x1="24" y1="24" x2="576" y2="24" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#60a5fa" />
+      <stop offset="1" stop-color="#2563eb" />
+    </linearGradient>
+    <linearGradient id="badgeFill" x1="44" y1="40" x2="82" y2="78" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#34d399" />
+      <stop offset="1" stop-color="#10b981" />
+    </linearGradient>
+  </defs>
+
+  <rect x="10" y="10" width="580" height="250" rx="22" fill="url(#bg)" />
+  <rect x="10.5" y="10.5" width="579" height="249" rx="21.5" stroke="#30363d" />
+  <rect x="24" y="24" width="552" height="5" rx="2.5" fill="url(#accent)" />
+
+  <rect x="44" y="40" width="38" height="38" rx="12" fill="#0f1f17" stroke="#1d3d2f" />
+  <rect x="52" y="48" width="22" height="22" rx="8" fill="url(#badgeFill)" />
+  <text x="63" y="63" text-anchor="middle" fill="#052e1b" font-size="12" font-weight="800" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">N</text>
+  <text x="96" y="58" fill="#f8fafc" font-size="18" font-weight="700" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">NowCoder</text>
+  <text x="96" y="74" fill="#8b9bb4" font-size="11" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">Contest Stats</text>
+
+  <text x="44" y="108" fill="#f8fafc" font-size="28" font-weight="700" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">黄色猫猫头</text>
+  <text x="44" y="130" fill="#8b9bb4" font-size="12" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">Competitive Programming Stats</text>
+
+  <g transform="translate(44,144)">
+    <rect width="246" height="34" rx="17" fill="#0b1220" stroke="#1f2937" />
+    <text x="20" y="21" fill="#8b9bb4" font-size="11" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">Max Rating</text>
+    <text x="226" y="23" text-anchor="end" fill="#bfdbfe" font-size="20" font-weight="700" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">1867</text>
+  </g>
+  <g transform="translate(310,144)">
+    <rect width="246" height="34" rx="17" fill="#0b1220" stroke="#1f2937" />
+    <text x="20" y="21" fill="#8b9bb4" font-size="11" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">Current Rating</text>
+    <text x="226" y="23" text-anchor="end" fill="#f8fafc" font-size="20" font-weight="700" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">1659</text>
+  </g>
+
+  <g transform="translate(44,194)">
+    <rect width="152" height="60" rx="16" fill="#111827" stroke="#263041" />
+    <rect x="16" y="18" width="5" height="24" rx="2.5" fill="#f59e0b" />
+    <text x="30" y="25" fill="#8b9bb4" font-size="11" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">Contests</text>
+    <text x="30" y="45" fill="#f8fafc" font-size="22" font-weight="700" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">51</text>
+  </g>
+  <g transform="translate(224,194)">
+    <rect width="152" height="60" rx="16" fill="#111827" stroke="#263041" />
+    <rect x="16" y="18" width="5" height="24" rx="2.5" fill="#22c55e" />
+    <text x="30" y="25" fill="#8b9bb4" font-size="11" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">Solved</text>
+    <text x="30" y="45" fill="#f8fafc" font-size="22" font-weight="700" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">148</text>
+  </g>
+  <g transform="translate(404,194)">
+    <rect width="152" height="60" rx="16" fill="#111827" stroke="#263041" />
+    <rect x="16" y="18" width="5" height="24" rx="2.5" fill="#fb7185" />
+    <text x="30" y="25" fill="#8b9bb4" font-size="11" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">Followers</text>
+    <text x="30" y="45" fill="#f8fafc" font-size="22" font-weight="700" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">20</text>
+  </g>
+</svg>
