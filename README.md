@@ -42,29 +42,21 @@
 
 ## Coding Profiles
 
-<!-- Edit card templates in assets/coding-profiles and let the workflow publish output/codeforces-card.svg + output/nowcoder-card.svg -->
+<!-- Edit card templates in assets/coding-profiles and let the workflow publish profiles-output/codeforces-card.svg + profiles-output/nowcoder-card.svg -->
 <div align="center">
   <a href="https://codeforces.com/profile/SilverChariotO.o">
-    <img src="https://raw.githubusercontent.com/XQHPrime/XQHPrime/output/codeforces-card.svg" alt="Codeforces Stats" width="600" />
+    <img src="https://raw.githubusercontent.com/XQHPrime/XQHPrime/profiles-output/codeforces-card.svg" alt="Codeforces Stats" width="600" />
   </a>
   <br />
   <a href="https://ac.nowcoder.com/acm/contest/profile/736728226">
-    <img src="https://raw.githubusercontent.com/XQHPrime/XQHPrime/output/nowcoder-card.svg" alt="NowCoder Stats" width="600" />
+    <img src="https://raw.githubusercontent.com/XQHPrime/XQHPrime/profiles-output/nowcoder-card.svg" alt="NowCoder Stats" width="600" />
   </a>
 </div>
 
 ## Tech Stack
 
 <div align="center">
-  <img src="https://techstack-generator.vercel.app/js-icon.svg" alt="JavaScript" width="68" height="68" />
-  <img src="https://techstack-generator.vercel.app/ts-icon.svg" alt="TypeScript" width="68" height="68" />
-  <img src="https://cdn.simpleicons.org/vuedotjs/4FC08D" alt="Vue.js" width="68" height="68" />
-  <img src="https://techstack-generator.vercel.app/react-icon.svg" alt="React" width="68" height="68" />
-  <img src="https://techstack-generator.vercel.app/java-icon.svg" alt="Java" width="68" height="68" />
-  <img src="https://techstack-generator.vercel.app/python-icon.svg" alt="Python" width="68" height="68" />
-  <img src="https://techstack-generator.vercel.app/cpp-icon.svg" alt="C++" width="68" height="68" />
-  <img src="https://techstack-generator.vercel.app/docker-icon.svg" alt="Docker" width="68" height="68" />
-  <img src="https://techstack-generator.vercel.app/kubernetes-icon.svg" alt="Kubernetes" width="68" height="68" />
+  <img src="https://skillicons.dev/icons?i=js,ts,vue,react,java,python,cpp,docker,kubernetes&theme=dark" alt="JavaScript, TypeScript, Vue, React, Java, Python, C++, Docker, Kubernetes" />
 </div>
 <div align="center">
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000&style=flat" alt="JavaScript" />

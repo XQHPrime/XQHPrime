@@ -35,16 +35,16 @@ jobs:
       - name: Generate Coding Profiles cards
         run: node scripts/generate_coding_profile_cards.mjs --mode live --output-dir "${{ runner.temp }}/coding-profiles"
 
-      - name: Publish cards to the output branch
+      - name: Publish cards to the profiles-output branch
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          if git fetch origin output:refs/remotes/origin/output; then
-            git switch --force-create output origin/output
+          if git fetch origin profiles-output:refs/remotes/origin/profiles-output; then
+            git switch --force-create profiles-output origin/profiles-output
           else
-            git switch --orphan output
+            git switch --orphan profiles-output
             git rm -rf . >/dev/null 2>&1 || true
           fi
 
@@ -53,4 +53,4 @@ jobs:
           git add codeforces-card.svg nowcoder-card.svg
           git diff --cached --quiet && exit 0
           git commit -m "chore: update coding profile cards"
-          git push origin HEAD:output
+          git push origin HEAD:profiles-output

@@ -30,6 +30,6 @@ GitHub Actions runs:
 node scripts/generate_coding_profile_cards.mjs --mode live
 ```
 
-It fetches the latest profile data, renders both cards, and publishes only the generated SVG files to the `output` branch.
+It fetches the latest profile data, renders both cards, and publishes only the generated SVG files to the `profiles-output` branch.
 
-This keeps style changes on `main` separate from auto-updated card assets on `output`, so the two do not conflict.
+This keeps style changes on `main` separate from auto-updated card assets on `profiles-output`, so the two do not conflict.
