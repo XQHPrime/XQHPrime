@@ -14,6 +14,7 @@
   <a href="https://github.com/XQHPrime"><img src="https://img.shields.io/badge/GitHub-XQHPrime-181717?logo=github&logoColor=white" alt="GitHub" /></a>&nbsp;
   <a href="https://codeforces.com/profile/SilverChariotO.o"><img src="https://img.shields.io/badge/Codeforces-SilverChariotO.o-1F8ACB?logo=codeforces&logoColor=white" alt="Codeforces" /></a>&nbsp;
   <a href="https://ac.nowcoder.com/acm/contest/profile/736728226"><img src="https://img.shields.io/badge/NowCoder-%E9%BB%84%E8%89%B2%E7%8C%AB%E7%8C%AB%E5%A4%B4-2DB55D?logo=nowcoder&logoColor=white" alt="NowCoder" /></a>&nbsp;
+  <a href="https://leetcode.cn/u/zealous-proskuriakovaqtm/"><img src="https://img.shields.io/badge/LeetCode-%E5%A4%9A%E6%83%85%E6%9C%80%E6%98%AF%E7%8E%8B%E7%B3%8A%E6%B6%82-FFA116?logo=leetcode&logoColor=white" alt="LeetCode" /></a>&nbsp;
   <img src="https://komarev.com/ghpvc/?username=XQHPrime&label=Views&color=0e75b6&style=flat" alt="Views" />
 </div>
 
@@ -42,14 +43,18 @@
 
 ## Coding Profiles
 
-<!-- Edit card templates in assets/coding-profiles and let the workflow publish profiles-output/codeforces-card.svg + profiles-output/nowcoder-card.svg -->
+<!-- Local edits own this README and the card templates. GitHub Actions only publishes generated SVGs to the profiles-output branch. -->
 <div align="center">
   <a href="https://codeforces.com/profile/SilverChariotO.o">
-    <img src="https://raw.githubusercontent.com/XQHPrime/XQHPrime/profiles-output/codeforces-card.svg?v=f84e825" alt="Codeforces Stats" width="600" />
+    <img src="https://raw.githubusercontent.com/XQHPrime/XQHPrime/profiles-output/codeforces-card.svg" alt="Codeforces Stats" width="600" />
   </a>
   <br />
   <a href="https://ac.nowcoder.com/acm/contest/profile/736728226">
-    <img src="https://raw.githubusercontent.com/XQHPrime/XQHPrime/profiles-output/nowcoder-card.svg?v=f84e825" alt="NowCoder Stats" width="600" />
+    <img src="https://raw.githubusercontent.com/XQHPrime/XQHPrime/profiles-output/nowcoder-card.svg" alt="NowCoder Stats" width="600" />
+  </a>
+  <br />
+  <a href="https://leetcode.cn/u/zealous-proskuriakovaqtm/">
+    <img src="https://raw.githubusercontent.com/XQHPrime/XQHPrime/profiles-output/leetcode-card.svg" alt="LeetCode Stats" width="600" />
   </a>
 </div>
 

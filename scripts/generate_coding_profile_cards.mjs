@@ -210,11 +210,13 @@ async function buildNowCoderCardData(cardConfig) {
     metaTitle: "NowCoder Stats Card",
     desc: `NowCoder contest profile card for ${profile.username}`,
     username: profile.username,
-    profileLine: "Competitive Programming Stats",
-    summaryLeftLabel: "Max Rating",
-    summaryLeftValue: maxRating,
-    summaryRightLabel: "Current Rating",
-    summaryRightValue: profile.currentRating,
+    profileLine: "NowCoder Contest Profile",
+    primaryLabel: "Current Rating",
+    primaryValue: profile.currentRating,
+    primaryHint: "live",
+    secondaryLabel: "Max Rating",
+    secondaryValue: maxRating,
+    secondaryHint: "peak",
     stat1Label: "Contests",
     stat1Value: profile.contests,
     stat2Label: "Solved",
@@ -255,6 +257,30 @@ async function fetchJson(url) {
   return response.json();
 }
 
+async function fetchLeetCodeGraphql(endpoint, query, variables, referer) {
+  const response = await fetch(endpoint, {
+    method: "POST",
+    headers: {
+      "User-Agent": USER_AGENT,
+      Accept: "application/json",
+      "Content-Type": "application/json",
+      Referer: referer,
+    },
+    body: JSON.stringify({ query, variables }),
+  });
+
+  if (!response.ok) {
+    throw new Error(`Request failed: ${response.status} ${response.statusText} for ${endpoint}`);
+  }
+
+  const payload = await response.json();
+  if (Array.isArray(payload.errors) && payload.errors.length > 0) {
+    throw new Error(`LeetCode API returned errors: ${payload.errors.map((error) => error.message).join("; ")}`);
+  }
+
+  return payload.data ?? {};
+}
+
 async function buildCodeforcesCardData(cardConfig) {
   const handle = cardConfig.handle;
   const [infoPayload, ratingPayload, statusPayload] = await Promise.all([
@@ -278,10 +304,12 @@ async function buildCodeforcesCardData(cardConfig) {
     desc: `Codeforces profile card for ${user.handle ?? handle}`,
     username: user.handle ?? handle,
     profileLine: `${rank} / max ${maxRank}`,
-    summaryLeftLabel: "Max Rating",
-    summaryLeftValue: user.maxRating ?? user.rating ?? "Unrated",
-    summaryRightLabel: "Current Rating",
-    summaryRightValue: user.rating ?? "Unrated",
+    primaryLabel: "Current Rating",
+    primaryValue: user.rating ?? "Unrated",
+    primaryHint: rank,
+    secondaryLabel: "Max Rating",
+    secondaryValue: user.maxRating ?? user.rating ?? "Unrated",
+    secondaryHint: maxRank,
     stat1Label: "Contests",
     stat1Value: String(contests),
     stat2Label: "Solved",
@@ -291,11 +319,169 @@ async function buildCodeforcesCardData(cardConfig) {
   };
 }
 
+function pickLeetCodeAcceptedCount(stats, difficulty) {
+  const entry = stats.find((item) => item?.difficulty === difficulty);
+  return String(entry?.count ?? 0);
+}
+
+function sumLeetCodeAcceptedCount(stats) {
+  return String(stats.reduce((total, item) => total + (Number(item?.count) || 0), 0));
+}
+
+function formatNumber(value, fallback = "N/A", options = {}) {
+  const number = Number(value);
+  return Number.isFinite(number) ? Math.round(number).toLocaleString("en-US", options) : fallback;
+}
+
+function parseJsonArray(value) {
+  try {
+    const parsed = JSON.parse(value ?? "[]");
+    return Array.isArray(parsed) ? parsed : [];
+  } catch {
+    return [];
+  }
+}
+
+function getLastPresent(items) {
+  for (let index = items.length - 1; index >= 0; index -= 1) {
+    if (items[index] !== null && items[index] !== undefined) {
+      return items[index];
+    }
+  }
+
+  return null;
+}
+
+function titleCaseEnum(value) {
+  return titleCase(String(value ?? "").replaceAll("_", " ").toLowerCase());
+}
+
+async function buildLeetCodeCardData(cardConfig) {
+  const userSlug = cardConfig.userSlug ?? cardConfig.username;
+  const isCnSite = cardConfig.site === "cn" || cardConfig.profileUrl?.includes("leetcode.cn");
+  const endpoint = isCnSite ? "https://leetcode.cn/graphql/" : "https://leetcode.com/graphql";
+  const referer = cardConfig.profileUrl ?? (isCnSite ? `https://leetcode.cn/u/${userSlug}/` : `https://leetcode.com/u/${userSlug}/`);
+
+  if (isCnSite) {
+    const data = await fetchLeetCodeGraphql(
+      endpoint,
+      `query leetCodeCnProfile($userSlug: String!) {
+        userProfilePublicProfile(userSlug: $userSlug) {
+          profile {
+            userSlug
+            realName
+          }
+        }
+        userProfileUserQuestionProgressV2(userSlug: $userSlug) {
+          numAcceptedQuestions {
+            difficulty
+            count
+          }
+        }
+        userContestRanking(userSlug: $userSlug) {
+          currentRatingRanking
+          ratingHistory
+          levelHistory
+        }
+      }`,
+      { userSlug },
+      referer,
+    );
+
+    const profile = data.userProfilePublicProfile?.profile;
+    const contestRanking = data.userContestRanking;
+    const acceptedStats = data.userProfileUserQuestionProgressV2?.numAcceptedQuestions ?? [];
+    const ratingHistory = parseJsonArray(contestRanking?.ratingHistory);
+    const levelHistory = parseJsonArray(contestRanking?.levelHistory);
+    const attendedContests = ratingHistory.filter((rating) => rating !== null && rating !== undefined).length;
+    const currentRating = getLastPresent(ratingHistory);
+    const maxRating = ratingHistory.reduce((highest, rating) => {
+      const value = Number(rating);
+      return Number.isFinite(value) ? Math.max(highest, value) : highest;
+    }, 0);
+    const currentLevel = titleCaseEnum(getLastPresent(levelHistory)) || "Contest";
+    const rank = formatNumber(contestRanking?.currentRatingRanking);
+    const easySolved = pickLeetCodeAcceptedCount(acceptedStats, "EASY");
+    const mediumSolved = pickLeetCodeAcceptedCount(acceptedStats, "MEDIUM");
+    const hardSolved = pickLeetCodeAcceptedCount(acceptedStats, "HARD");
+
+    return {
+      metaTitle: "LeetCode Stats Card",
+      desc: `LeetCode China profile card for ${profile?.realName || profile?.userSlug || userSlug}`,
+      username: profile?.realName || profile?.userSlug || userSlug,
+      profileLine: "LeetCode China Contest Profile",
+      primaryLabel: "Badge",
+      primaryValue: currentLevel,
+      primaryHint: `rank #${rank}`,
+      secondaryLabel: "Contest Rating",
+      secondaryValue: formatNumber(currentRating, "N/A", { useGrouping: false }),
+      secondaryHint: `peak ${formatNumber(maxRating, "N/A", { useGrouping: false })}`,
+      stat1Label: "Solved",
+      stat1Value: sumLeetCodeAcceptedCount(acceptedStats),
+      stat2Label: "E / M / H",
+      stat2Value: `${easySolved} / ${mediumSolved} / ${hardSolved}`,
+      stat3Label: "Contests",
+      stat3Value: String(attendedContests),
+    };
+  }
+
+  const data = await fetchLeetCodeGraphql(
+    endpoint,
+    `query leetCodeProfile($username: String!) {
+      matchedUser(username: $username) {
+        username
+        profile {
+          ranking
+        }
+        submitStatsGlobal {
+          acSubmissionNum {
+            difficulty
+            count
+          }
+        }
+      }
+      userContestRanking(username: $username) {
+        attendedContestsCount
+        rating
+      }
+    }`,
+    { username: userSlug },
+    referer,
+  );
+
+  const user = data.matchedUser;
+  const contestRanking = data.userContestRanking;
+  const acceptedStats = user?.submitStatsGlobal?.acSubmissionNum ?? [];
+  const ranking = formatNumber(user?.profile?.ranking);
+  const contests = formatNumber(contestRanking?.attendedContestsCount, "0");
+  const contestRating = formatNumber(contestRanking?.rating, "N/A", { useGrouping: false });
+
+  return {
+    metaTitle: "LeetCode Stats Card",
+    desc: `LeetCode profile card for ${user?.username ?? userSlug}`,
+    username: user?.username ?? userSlug,
+    profileLine: user ? `Rank #${ranking} / ${contests} contests` : "Problem Solving Stats",
+    primaryLabel: "Contest Rating",
+    primaryValue: contestRating,
+    primaryHint: `rank #${ranking}`,
+    secondaryLabel: "Solved",
+    secondaryValue: pickLeetCodeAcceptedCount(acceptedStats, "All"),
+    secondaryHint: `${contests} contests`,
+    stat1Label: "Easy",
+    stat1Value: pickLeetCodeAcceptedCount(acceptedStats, "Easy"),
+    stat2Label: "Medium",
+    stat2Value: pickLeetCodeAcceptedCount(acceptedStats, "Medium"),
+    stat3Label: "Hard",
+    stat3Value: pickLeetCodeAcceptedCount(acceptedStats, "Hard"),
+  };
+}
+
 async function loadLiveData(config) {
   return {
     cards: {
       codeforces: await buildCodeforcesCardData(config.cards.codeforces),
       nowcoder: await buildNowCoderCardData(config.cards.nowcoder),
+      leetcode: await buildLeetCodeCardData(config.cards.leetcode),
     },
   };
 }

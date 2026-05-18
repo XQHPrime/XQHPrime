@@ -6,6 +6,7 @@ This directory keeps the editable source of the profile cards shown in `README.m
 
 - `codeforces-card.template.svg`: editable Codeforces card template
 - `nowcoder-card.template.svg`: editable NowCoder card template
+- `leetcode-card.template.svg`: editable LeetCode card template
 - `config.json`: profile ids, handles, output names
 - `sample-data.json`: local preview data used in offline mode
 - `preview.html`: local side-by-side preview page
@@ -30,6 +31,6 @@ GitHub Actions runs:
 node scripts/generate_coding_profile_cards.mjs --mode live
 ```
 
-It fetches the latest profile data, renders both cards, and publishes only the generated SVG files to the `profiles-output` branch.
+It fetches the latest profile data, renders all cards, and publishes only the generated SVG files to the `profiles-output` branch.
 
-This keeps style changes on `main` separate from auto-updated card assets on `profiles-output`, so the two do not conflict.
+The workflow never commits `README.md`. Keep README links stable and edit card layout/style in these templates on `main`; the workflow owns only the generated SVG assets on `profiles-output`, which keeps local style edits separate from automated data updates.

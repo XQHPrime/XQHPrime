@@ -2,6 +2,8 @@ name: update coding profile cards
 
 on:
   push:
+    branches:
+      - main
     paths:
       - "assets/coding-profiles/**"
       - "scripts/generate_coding_profile_cards.mjs"
@@ -32,16 +34,19 @@ jobs:
         with:
           node-version: "22"
 
+      - name: Configure git author
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
       - name: Generate Coding Profiles cards
         run: node scripts/generate_coding_profile_cards.mjs --mode live --output-dir "${{ runner.temp }}/coding-profiles"
 
       - name: Publish cards to the profiles-output branch
         run: |
           set -euo pipefail
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          if git fetch origin profiles-output:refs/remotes/origin/profiles-output; then
+          if git fetch origin +profiles-output:refs/remotes/origin/profiles-output; then
             git switch --force-create profiles-output origin/profiles-output
           else
             git switch --orphan profiles-output
@@ -50,7 +55,8 @@ jobs:
 
           cp "${{ runner.temp }}/coding-profiles/codeforces-card.svg" codeforces-card.svg
           cp "${{ runner.temp }}/coding-profiles/nowcoder-card.svg" nowcoder-card.svg
-          git add codeforces-card.svg nowcoder-card.svg
+          cp "${{ runner.temp }}/coding-profiles/leetcode-card.svg" leetcode-card.svg
+          git add codeforces-card.svg nowcoder-card.svg leetcode-card.svg
           git diff --cached --quiet && exit 0
           git commit -m "chore: update coding profile cards"
           git push origin HEAD:profiles-output

@@ -11,6 +11,13 @@
       "output": "nowcoder-card.svg",
       "profileUrl": "https://ac.nowcoder.com/acm/contest/profile/736728226",
       "profileId": "736728226"
+    },
+    "leetcode": {
+      "template": "leetcode-card.template.svg",
+      "output": "leetcode-card.svg",
+      "profileUrl": "https://leetcode.cn/u/zealous-proskuriakovaqtm/",
+      "site": "cn",
+      "userSlug": "zealous-proskuriakovaqtm"
     }
   }
 }
