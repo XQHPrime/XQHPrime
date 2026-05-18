@@ -45,20 +45,29 @@
 
 <!-- Local edits own this README and the card templates. GitHub Actions only publishes generated SVGs to the profiles-output branch. -->
 <div align="center">
-
-[![Codeforces Stats](https://raw.githubusercontent.com/XQHPrime/XQHPrime/profiles-output/codeforces-card-dark.svg#gh-dark-mode-only)](https://codeforces.com/profile/SilverChariotO.o)
-[![Codeforces Stats](https://raw.githubusercontent.com/XQHPrime/XQHPrime/profiles-output/codeforces-card-light.svg#gh-light-mode-only)](https://codeforces.com/profile/SilverChariotO.o)
-
-<br />
-
-[![NowCoder Stats](https://raw.githubusercontent.com/XQHPrime/XQHPrime/profiles-output/nowcoder-card-dark.svg#gh-dark-mode-only)](https://ac.nowcoder.com/acm/contest/profile/736728226)
-[![NowCoder Stats](https://raw.githubusercontent.com/XQHPrime/XQHPrime/profiles-output/nowcoder-card-light.svg#gh-light-mode-only)](https://ac.nowcoder.com/acm/contest/profile/736728226)
-
-<br />
-
-[![LeetCode Stats](https://raw.githubusercontent.com/XQHPrime/XQHPrime/profiles-output/leetcode-card-dark.svg#gh-dark-mode-only)](https://leetcode.cn/u/zealous-proskuriakovaqtm/)
-[![LeetCode Stats](https://raw.githubusercontent.com/XQHPrime/XQHPrime/profiles-output/leetcode-card-light.svg#gh-light-mode-only)](https://leetcode.cn/u/zealous-proskuriakovaqtm/)
-
+  <a href="https://codeforces.com/profile/SilverChariotO.o">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/XQHPrime/XQHPrime/profiles-output/codeforces-card-dark.svg" />
+      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/XQHPrime/XQHPrime/profiles-output/codeforces-card-light.svg" />
+      <img src="https://raw.githubusercontent.com/XQHPrime/XQHPrime/profiles-output/codeforces-card-dark.svg" alt="Codeforces Stats" width="600" />
+    </picture>
+  </a>
+  <br />
+  <a href="https://ac.nowcoder.com/acm/contest/profile/736728226">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/XQHPrime/XQHPrime/profiles-output/nowcoder-card-dark.svg" />
+      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/XQHPrime/XQHPrime/profiles-output/nowcoder-card-light.svg" />
+      <img src="https://raw.githubusercontent.com/XQHPrime/XQHPrime/profiles-output/nowcoder-card-dark.svg" alt="NowCoder Stats" width="600" />
+    </picture>
+  </a>
+  <br />
+  <a href="https://leetcode.cn/u/zealous-proskuriakovaqtm/">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/XQHPrime/XQHPrime/profiles-output/leetcode-card-dark.svg" />
+      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/XQHPrime/XQHPrime/profiles-output/leetcode-card-light.svg" />
+      <img src="https://raw.githubusercontent.com/XQHPrime/XQHPrime/profiles-output/leetcode-card-dark.svg" alt="LeetCode Stats" width="600" />
+    </picture>
+  </a>
 </div>
 
 ## Tech Stack
