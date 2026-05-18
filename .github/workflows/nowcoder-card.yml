@@ -53,10 +53,14 @@ jobs:
             git rm -rf . >/dev/null 2>&1 || true
           fi
 
-          cp "${{ runner.temp }}/coding-profiles/codeforces-card.svg" codeforces-card.svg
-          cp "${{ runner.temp }}/coding-profiles/nowcoder-card.svg" nowcoder-card.svg
-          cp "${{ runner.temp }}/coding-profiles/leetcode-card.svg" leetcode-card.svg
-          git add codeforces-card.svg nowcoder-card.svg leetcode-card.svg
+          git rm -f codeforces-card.svg nowcoder-card.svg leetcode-card.svg >/dev/null 2>&1 || true
+          cp "${{ runner.temp }}/coding-profiles/codeforces-card-light.svg" codeforces-card-light.svg
+          cp "${{ runner.temp }}/coding-profiles/codeforces-card-dark.svg" codeforces-card-dark.svg
+          cp "${{ runner.temp }}/coding-profiles/nowcoder-card-light.svg" nowcoder-card-light.svg
+          cp "${{ runner.temp }}/coding-profiles/nowcoder-card-dark.svg" nowcoder-card-dark.svg
+          cp "${{ runner.temp }}/coding-profiles/leetcode-card-light.svg" leetcode-card-light.svg
+          cp "${{ runner.temp }}/coding-profiles/leetcode-card-dark.svg" leetcode-card-dark.svg
+          git add *-card-light.svg *-card-dark.svg
           git diff --cached --quiet && exit 0
           git commit -m "chore: update coding profile cards"
           git push origin HEAD:profiles-output

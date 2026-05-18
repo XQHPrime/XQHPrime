@@ -46,15 +46,18 @@
 <!-- Local edits own this README and the card templates. GitHub Actions only publishes generated SVGs to the profiles-output branch. -->
 <div align="center">
   <a href="https://codeforces.com/profile/SilverChariotO.o">
-    <img src="https://raw.githubusercontent.com/XQHPrime/XQHPrime/profiles-output/codeforces-card.svg" alt="Codeforces Stats" width="600" />
+    <img src="https://raw.githubusercontent.com/XQHPrime/XQHPrime/profiles-output/codeforces-card-dark.svg#gh-dark-mode-only" alt="Codeforces Stats" width="600" />
+    <img src="https://raw.githubusercontent.com/XQHPrime/XQHPrime/profiles-output/codeforces-card-light.svg#gh-light-mode-only" alt="Codeforces Stats" width="600" />
   </a>
   <br />
   <a href="https://ac.nowcoder.com/acm/contest/profile/736728226">
-    <img src="https://raw.githubusercontent.com/XQHPrime/XQHPrime/profiles-output/nowcoder-card.svg" alt="NowCoder Stats" width="600" />
+    <img src="https://raw.githubusercontent.com/XQHPrime/XQHPrime/profiles-output/nowcoder-card-dark.svg#gh-dark-mode-only" alt="NowCoder Stats" width="600" />
+    <img src="https://raw.githubusercontent.com/XQHPrime/XQHPrime/profiles-output/nowcoder-card-light.svg#gh-light-mode-only" alt="NowCoder Stats" width="600" />
   </a>
   <br />
   <a href="https://leetcode.cn/u/zealous-proskuriakovaqtm/">
-    <img src="https://raw.githubusercontent.com/XQHPrime/XQHPrime/profiles-output/leetcode-card.svg" alt="LeetCode Stats" width="600" />
+    <img src="https://raw.githubusercontent.com/XQHPrime/XQHPrime/profiles-output/leetcode-card-dark.svg#gh-dark-mode-only" alt="LeetCode Stats" width="600" />
+    <img src="https://raw.githubusercontent.com/XQHPrime/XQHPrime/profiles-output/leetcode-card-light.svg#gh-light-mode-only" alt="LeetCode Stats" width="600" />
   </a>
 </div>
 

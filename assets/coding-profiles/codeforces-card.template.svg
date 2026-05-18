@@ -4,36 +4,20 @@
   <desc id="desc">{{desc}}</desc>
   <style>
     :root {
-      color-scheme: light dark;
-      --bg-start: #ffffff;
-      --bg-mid: #f8fafc;
-      --bg-end: #eef2ff;
-      --surface: #ffffff;
-      --surface-muted: #f8fafc;
-      --text: #0f172a;
-      --muted: #64748b;
-      --hint: #475569;
-      --border: #cbd5e1;
+      --bg-start: {{bgStart}};
+      --bg-mid: {{bgMid}};
+      --bg-end: {{bgEnd}};
+      --surface: {{surface}};
+      --surface-muted: {{surfaceMuted}};
+      --text: {{textColor}};
+      --muted: {{mutedColor}};
+      --hint: {{hintColor}};
+      --border: {{borderColor}};
       --platform-a: #ef4444;
       --platform-b: #f59e0b;
       --platform-c: #3b82f6;
-      --platform-value: #b45309;
+      --platform-value: {{platformValueColor}};
       --badge-text: #111827;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg-start: #111827;
-        --bg-mid: #0f172a;
-        --bg-end: #0b1120;
-        --surface: #111827;
-        --surface-muted: #0f172a;
-        --text: #f8fafc;
-        --muted: #94a3b8;
-        --hint: #cbd5e1;
-        --border: #334155;
-        --platform-value: #fde68a;
-      }
     }
 
     .bg-start { stop-color: var(--bg-start); }

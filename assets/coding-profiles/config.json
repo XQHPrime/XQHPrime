@@ -3,18 +3,30 @@
     "codeforces": {
       "template": "codeforces-card.template.svg",
       "output": "codeforces-card.svg",
+      "outputs": {
+        "light": "codeforces-card-light.svg",
+        "dark": "codeforces-card-dark.svg"
+      },
       "profileUrl": "https://codeforces.com/profile/SilverChariotO.o",
       "handle": "SilverChariotO.o"
     },
     "nowcoder": {
       "template": "nowcoder-card.template.svg",
       "output": "nowcoder-card.svg",
+      "outputs": {
+        "light": "nowcoder-card-light.svg",
+        "dark": "nowcoder-card-dark.svg"
+      },
       "profileUrl": "https://ac.nowcoder.com/acm/contest/profile/736728226",
       "profileId": "736728226"
     },
     "leetcode": {
       "template": "leetcode-card.template.svg",
       "output": "leetcode-card.svg",
+      "outputs": {
+        "light": "leetcode-card-light.svg",
+        "dark": "leetcode-card-dark.svg"
+      },
       "profileUrl": "https://leetcode.cn/u/zealous-proskuriakovaqtm/",
       "site": "cn",
       "userSlug": "zealous-proskuriakovaqtm"

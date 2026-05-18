@@ -31,6 +31,6 @@ GitHub Actions runs:
 node scripts/generate_coding_profile_cards.mjs --mode live
 ```
 
-It fetches the latest profile data, renders all cards, and publishes only the generated SVG files to the `profiles-output` branch.
+It fetches the latest profile data, renders light and dark SVG files for every card, and publishes only the generated SVG files to the `profiles-output` branch.
 
-The workflow never commits `README.md`. Keep README links stable and edit card layout/style in these templates on `main`; the workflow owns only the generated SVG assets on `profiles-output`, which keeps local style edits separate from automated data updates.
+The root `README.md` appends GitHub's `#gh-dark-mode-only` and `#gh-light-mode-only` URL fragments so GitHub chooses the matching card for the viewer's current GitHub theme. The workflow never commits `README.md`; keep README links stable and edit card layout/style in these templates on `main`, while the workflow owns only generated SVG assets on `profiles-output`.

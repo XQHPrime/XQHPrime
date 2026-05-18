@@ -58,6 +58,12 @@
         gap: 20px;
       }
 
+      .theme-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 16px;
+      }
+
       .card {
         padding: 20px;
         border: 1px solid var(--border);
@@ -68,6 +74,14 @@
       .card h2 {
         margin: 0 0 14px;
         font-size: 18px;
+      }
+
+      .card h3 {
+        margin: 0 0 10px;
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 600;
+        text-transform: uppercase;
       }
 
       img {
@@ -94,17 +108,44 @@
       <section class="grid">
         <article class="card">
           <h2>Codeforces</h2>
-          <img src="./generated/codeforces-card.svg" alt="Local Codeforces card preview" />
+          <div class="theme-grid">
+            <div>
+              <h3>Light</h3>
+              <img src="./generated/codeforces-card-light.svg" alt="Local Codeforces light card preview" />
+            </div>
+            <div>
+              <h3>Dark</h3>
+              <img src="./generated/codeforces-card-dark.svg" alt="Local Codeforces dark card preview" />
+            </div>
+          </div>
         </article>
 
         <article class="card">
           <h2>NowCoder</h2>
-          <img src="./generated/nowcoder-card.svg" alt="Local NowCoder card preview" />
+          <div class="theme-grid">
+            <div>
+              <h3>Light</h3>
+              <img src="./generated/nowcoder-card-light.svg" alt="Local NowCoder light card preview" />
+            </div>
+            <div>
+              <h3>Dark</h3>
+              <img src="./generated/nowcoder-card-dark.svg" alt="Local NowCoder dark card preview" />
+            </div>
+          </div>
         </article>
 
         <article class="card">
           <h2>LeetCode</h2>
-          <img src="./generated/leetcode-card.svg" alt="Local LeetCode card preview" />
+          <div class="theme-grid">
+            <div>
+              <h3>Light</h3>
+              <img src="./generated/leetcode-card-light.svg" alt="Local LeetCode light card preview" />
+            </div>
+            <div>
+              <h3>Dark</h3>
+              <img src="./generated/leetcode-card-dark.svg" alt="Local LeetCode dark card preview" />
+            </div>
+          </div>
         </article>
       </section>
     </main>

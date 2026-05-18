@@ -10,6 +10,32 @@ const SAMPLE_DATA_PATH = path.join(REPO_ROOT, "assets", "coding-profiles", "samp
 const DEFAULT_OUTPUT_DIR = path.join(REPO_ROOT, "assets", "coding-profiles", "generated");
 const USER_AGENT =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36";
+const THEME_TOKENS = {
+  light: {
+    bgStart: "#ffffff",
+    bgMid: "#f8fafc",
+    bgEnd: "#eef2ff",
+    surface: "#ffffff",
+    surfaceMuted: "#f8fafc",
+    textColor: "#0f172a",
+    mutedColor: "#64748b",
+    hintColor: "#475569",
+    borderColor: "#cbd5e1",
+    platformValueColor: "#b45309",
+  },
+  dark: {
+    bgStart: "#111827",
+    bgMid: "#0f172a",
+    bgEnd: "#0b1120",
+    surface: "#111827",
+    surfaceMuted: "#0f172a",
+    textColor: "#f8fafc",
+    mutedColor: "#94a3b8",
+    hintColor: "#cbd5e1",
+    borderColor: "#334155",
+    platformValueColor: "#fde68a",
+  },
+};
 
 function parseArgs(argv) {
   const options = {
@@ -498,7 +524,6 @@ async function generateCards({ mode, outputDir }) {
 
   for (const [cardName, cardConfig] of Object.entries(config.cards)) {
     const templatePath = path.join(path.dirname(CONFIG_PATH), cardConfig.template);
-    const outputPath = path.join(outputDir, cardConfig.output);
     const template = await fs.readFile(templatePath, "utf8");
     const cardData = dataset.cards?.[cardName];
 
@@ -506,9 +531,13 @@ async function generateCards({ mode, outputDir }) {
       throw new Error(`Missing data for card "${cardName}".`);
     }
 
-    const svg = renderTemplate(template, cardData);
-    await fs.writeFile(outputPath, svg, "utf8");
-    console.log(`Generated ${path.relative(REPO_ROOT, outputPath)}`);
+    for (const [themeName, themeTokens] of Object.entries(THEME_TOKENS)) {
+      const outputName = cardConfig.outputs?.[themeName] ?? cardConfig.output;
+      const outputPath = path.join(outputDir, outputName);
+      const svg = renderTemplate(template, { ...themeTokens, ...cardData });
+      await fs.writeFile(outputPath, svg, "utf8");
+      console.log(`Generated ${path.relative(REPO_ROOT, outputPath)}`);
+    }
   }
 }
 
