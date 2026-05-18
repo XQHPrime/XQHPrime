@@ -1,0 +1,105 @@
+<svg width="600" height="270" viewBox="0 0 600 270" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <!-- Edit this template for layout/style only. Data is injected by scripts/generate_coding_profile_cards.mjs. -->
+  <title id="title">Codeforces Stats Card</title>
+  <desc id="desc">Codeforces profile card for SilverChariotO.o</desc>
+  <style>
+    :root {
+      --bg-start: #ffffff;
+      --bg-mid: #f8fafc;
+      --bg-end: #eef2ff;
+      --surface: #ffffff;
+      --surface-muted: #f8fafc;
+      --text: #0f172a;
+      --muted: #64748b;
+      --hint: #475569;
+      --border: #cbd5e1;
+      --platform-a: #ef4444;
+      --platform-b: #f59e0b;
+      --platform-c: #3b82f6;
+      --platform-value: #b45309;
+      --badge-text: #111827;
+    }
+
+    .bg-start { stop-color: var(--bg-start); }
+    .bg-mid { stop-color: var(--bg-mid); }
+    .bg-end { stop-color: var(--bg-end); }
+    .accent-a { stop-color: var(--platform-a); }
+    .accent-b { stop-color: var(--platform-b); }
+    .accent-c { stop-color: var(--platform-c); }
+    .card-bg { fill: url(#bg); }
+    .surface { fill: var(--surface); stroke: var(--border); }
+    .surface-muted { fill: var(--surface-muted); stroke: var(--border); }
+    .border { stroke: var(--border); }
+    .accent-fill { fill: url(#accent); }
+    .badge-fill { fill: url(#badgeFill); }
+    .text { fill: var(--text); }
+    .muted { fill: var(--muted); }
+    .hint { fill: var(--hint); }
+    .platform-a-fill { fill: var(--platform-a); }
+    .platform-b-fill { fill: var(--platform-b); }
+    .platform-c-fill { fill: var(--platform-c); }
+    .platform-value { fill: var(--platform-value); }
+    .badge-text { fill: var(--badge-text); }
+  </style>
+  <defs>
+    <linearGradient id="bg" x1="20" y1="12" x2="580" y2="260" gradientUnits="userSpaceOnUse">
+      <stop class="bg-start" />
+      <stop class="bg-mid" offset="0.58" />
+      <stop class="bg-end" offset="1" />
+    </linearGradient>
+    <linearGradient id="accent" x1="24" y1="24" x2="576" y2="24" gradientUnits="userSpaceOnUse">
+      <stop class="accent-a" />
+      <stop class="accent-b" offset="0.52" />
+      <stop class="accent-c" offset="1" />
+    </linearGradient>
+    <linearGradient id="badgeFill" x1="44" y1="40" x2="82" y2="78" gradientUnits="userSpaceOnUse">
+      <stop class="accent-a" />
+      <stop class="accent-b" offset="1" />
+    </linearGradient>
+  </defs>
+
+  <rect x="10" y="10" width="580" height="250" rx="20" class="card-bg" />
+  <rect x="10.5" y="10.5" width="579" height="249" rx="19.5" class="border" />
+  <rect x="24" y="24" width="552" height="5" rx="2.5" class="accent-fill" />
+
+  <rect x="42" y="42" width="40" height="40" rx="12" class="surface" />
+  <rect x="51" y="51" width="22" height="22" rx="8" class="badge-fill" />
+  <text x="62" y="66" text-anchor="middle" class="badge-text" font-size="12" font-weight="800" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">C</text>
+  <text x="96" y="58" class="text" font-size="18" font-weight="700" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">Codeforces</text>
+  <text x="96" y="76" class="muted" font-size="11" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">SilverChariotO.o</text>
+  <text x="556" y="58" text-anchor="end" class="hint" font-size="12" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">Expert / max Expert</text>
+
+  <g transform="translate(42,98)">
+    <rect width="334" height="82" rx="16" class="surface" />
+    <rect x="16" y="18" width="5" height="46" rx="2.5" class="platform-b-fill" />
+    <text x="34" y="31" class="muted" font-size="12" font-weight="600" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">Current Rating</text>
+    <text x="34" y="67" class="platform-value" font-size="38" font-weight="800" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">1764</text>
+    <text x="312" y="64" text-anchor="end" class="text" font-size="12" font-weight="600" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">Expert</text>
+  </g>
+
+  <g transform="translate(392,98)">
+    <rect width="166" height="82" rx="16" class="surface" />
+    <text x="18" y="27" class="muted" font-size="12" font-weight="600" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">Max Rating</text>
+    <text x="18" y="58" class="text" font-size="30" font-weight="800" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">1810</text>
+    <text x="18" y="74" class="muted" font-size="10" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">Expert</text>
+  </g>
+
+  <g transform="translate(42,198)">
+    <rect width="156" height="46" rx="14" class="surface-muted" />
+    <rect x="15" y="14" width="4" height="18" rx="2" class="platform-a-fill" />
+    <text x="30" y="21" class="muted" font-size="11" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">Contests</text>
+    <text x="30" y="37" class="text" font-size="18" font-weight="800" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">33</text>
+  </g>
+  <g transform="translate(222,198)">
+    <rect width="156" height="46" rx="14" class="surface-muted" />
+    <rect x="15" y="14" width="4" height="18" rx="2" class="platform-b-fill" />
+    <text x="30" y="21" class="muted" font-size="11" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">Solved</text>
+    <text x="30" y="37" class="text" font-size="18" font-weight="800" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">279</text>
+  </g>
+  <g transform="translate(402,198)">
+    <rect width="156" height="46" rx="14" class="surface-muted" />
+    <rect x="15" y="14" width="4" height="18" rx="2" class="platform-c-fill" />
+    <text x="30" y="21" class="muted" font-size="11" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">Friends</text>
+    <text x="30" y="37" class="text" font-size="18" font-weight="800" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">69</text>
+  </g>
+</svg>
