@@ -73,7 +73,7 @@
     <rect width="334" height="82" rx="16" class="surface" />
     <rect x="16" y="18" width="5" height="46" rx="2.5" class="platform-b-fill" />
     <text x="34" y="31" class="muted" font-size="12" font-weight="600" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">Current Rating</text>
-    <text x="34" y="67" class="platform-value" font-size="38" font-weight="800" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">1764</text>
+    <text x="34" y="67" class="platform-value" font-size="38" font-weight="800" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">1767</text>
     <text x="312" y="64" text-anchor="end" class="text" font-size="12" font-weight="600" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">Expert</text>
   </g>
 
